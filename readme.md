@@ -21,7 +21,21 @@ parallels Ubuntu 20.04
  
  A simple example where it leak the instructions in text segments executed by victim process.
  
+ ` spy.c`
+ 
+ An implementation of the flush+relaod attack on GnuPG-1.4.13. 
 
 ## Usage
+
+ ### Attack file
  
  ` gcc file.c -o file `
+ 
+ ### GnuPG RSA decryption
+ 
+ ` gpg --gen-key `
+ 
+ ` gpg -se -r <userID> <file-to-be-encrypted> `
+ 
+ ` gpg -d <file-to-be-decrypted> `
+ 
